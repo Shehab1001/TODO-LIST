@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TO-DO-LIST</title>
+
+    <link
+      rel="shortcut icon"
+      href="img/list-check-solid.svg"
+      type="image/x-icon"
+    />
+
+    <!-- ~Bootstrap -->
+   <link rel="stylesheet" href="style/bootstrap.min.css">
+
+    <!-- #Font Awesome -->
+<link rel="stylesheet" href="style/all.min.css">
+
+    <!-- !CSS Style -->
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+
+  <body class="bg-body-tertiary">
+    <section class="d-flex justify-content-center row">
+      <div
+        class="main bg-white p-3 my-5 rounded-4 shadow text-center col-10 col-sm-8 col-md-6 col-lg-5 col-xxl-4 overflow-hidden"
+      >
+        <!-- @<title> -->
+
+        <h1 class="display-6 fw-bold">
+          <i
+            class="fa-solid fa-list-check display-6"
+            style="color: #a370f0"
+          ></i>
+          TO-Do-List
+        </h1>
+
+        <!-- @</title> -->
+
+        <!-- #<search> -->
+
+        <div class="d-flex justify-content-evenly mt-4 mb-2 p-2">
+          <input
+            type="text"
+            placeholder="Add New Task"
+            id="add-task"
+            class="form-control w-75 rounded-3 me-2"
+          />
+
+          <button
+            class="add-button rounded-3"
+            id="addButton"
+            onclick="addTask()"
+          >
+            Add
+            <div class="icon rounded-3">
+              <i class="fa-solid fa-plus" style="color: #a370f0"></i>
+            </div>
+          </button>
+
+          <button
+            class="edit-button rounded-3 d-none"
+            id="editButton"
+            onclick="setTaskToEdit()"
+          >
+            Edit
+            <div class="icon rounded-3">
+              <i class="fa-solid fa-check" style="color: #8839ff"></i>
+            </div>
+          </button>
+        </div>
+
+        <!-- #</search> -->
+
+        <!-- ?<task-list> -->
+
+        <div id="task-list" class="text-start overflow-auto p-2 h-75"></div>
+
+        <!-- ?</task-list> -->
+      </div>
+    </section>
+
+    <!-- ^<js> -->
+
+    <script src="js/main.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- ^</js> -->
+  </body>
+</html>

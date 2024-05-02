@@ -1,0 +1,526 @@
+.main {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+
+h1 {
+  color: #a370f0;
+}
+
+/* #<searsh> */
+
+/* *<searsh-bar> */
+.form-control {
+  border: 1px solid #a370f0;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-control:focus-visible {
+  box-shadow: 0px 0px 0px 2px #a370f0;
+  border: 1px solid #a370f0;
+  color: #a370f0;
+  font-weight: 400;
+}
+
+/* *</searsh-bar> */
+
+/* ~<buttons> */
+
+.add-button {
+  background: #a370f0;
+  color: white;
+  font-weight: 500;
+  padding-left: 12px;
+  padding-right: 3.3em;
+  height: 2.8em;
+  border: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 10px -1px #614094;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.add-button .icon {
+  background: white;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+  right: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+.add-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.add-button:active .icon {
+  transform: scale(0.94);
+  background-color: #faf7ff;
+}
+
+.edit-button {
+  background: #8839ff;
+  color: white;
+  font-weight: 500;
+  padding-left: 12px;
+  padding-right: 3.3em;
+  height: 2.8em;
+  border: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 10px -1px #5522a2;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.edit-button .icon {
+  background: white;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #5522a2;
+  right: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+.edit-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.edit-button:active .icon {
+  transform: scale(0.94);
+  background-color: #faf7ff;
+}
+
+/* ~</buttons> */
+
+/* #</searsh> */
+
+/* ?<task-list> */
+
+/* !<task-body> */
+
+.checkbox-wrapper-11 {
+  --text: #414856;
+  --check: #4f29f0;
+  --disabled: #c3c8de;
+  --border-radius: 10px;
+  border-radius: var(--border-radius);
+  position: relative;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 30px auto;
+  align-items: center;
+}
+.checkbox-wrapper-11 label {
+  color: var(--text);
+  font-size: 17px;
+  font-weight: 700;
+  position: relative;
+  cursor: pointer;
+  display: grid;
+  align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: color 0.3s ease;
+}
+.checkbox-wrapper-11 label::before,
+.checkbox-wrapper-11 label::after {
+  content: "";
+  position: absolute;
+}
+.checkbox-wrapper-11 label::before {
+  height: 2px;
+  width: 8px;
+  left: -27px;
+  background: var(--check);
+  border-radius: 2px;
+  transition: background 0.3s ease;
+}
+.checkbox-wrapper-11 label:after {
+  height: 4px;
+  width: 4px;
+  top: 8px;
+  left: -25px;
+  border-radius: 50%;
+}
+.checkbox-wrapper-11 input[type="checkbox"] {
+  appearance: none;
+  appearance: none;
+  position: relative;
+  height: 15px;
+  width: 15px;
+  outline: none;
+  border: 0;
+  margin: 0 15px 0 0;
+  cursor: pointer;
+  background: var(--background);
+  display: grid;
+  align-items: center;
+}
+.checkbox-wrapper-11 input[type="checkbox"]::before,
+.checkbox-wrapper-11 input[type="checkbox"]::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  top: auto;
+  background: var(--check);
+  border-radius: 2px;
+}
+.checkbox-wrapper-11 input[type="checkbox"]::before {
+  width: 0px;
+  right: 60%;
+  transform-origin: right bottom;
+}
+.checkbox-wrapper-11 input[type="checkbox"]::after {
+  width: 8px;
+  left: 40%;
+  transform-origin: left bottom;
+}
+.checkbox-wrapper-11 input[type="checkbox"]:checked::before {
+  -webkit-animation: check-01-11 0.4s ease forwards;
+  animation: check-01-11 0.4s ease forwards;
+}
+.checkbox-wrapper-11 input[type="checkbox"]:checked::after {
+  -webkit-animation: check-02-11 0.4s ease forwards;
+  animation: check-02-11 0.4s ease forwards;
+}
+.checkbox-wrapper-11 input[type="checkbox"]:checked + label {
+  color: var(--disabled);
+  -webkit-animation: move-11 0.3s ease 0.1s forwards;
+  animation: move-11 0.3s ease 0.1s forwards;
+}
+.checkbox-wrapper-11 input[type="checkbox"]:checked + label::before {
+  background: var(--disabled);
+  -webkit-animation: slice-11 0.4s ease forwards;
+  animation: slice-11 0.4s ease forwards;
+}
+.checkbox-wrapper-11 input[type="checkbox"]:checked + label::after {
+  -webkit-animation: firework-11 0.5s ease forwards 0.1s;
+  animation: firework-11 0.5s ease forwards 0.1s;
+}
+
+@-webkit-keyframes move-11 {
+  50% {
+    padding-left: 8px;
+    padding-right: 0px;
+  }
+  100% {
+    padding-right: 4px;
+  }
+}
+
+@keyframes move-11 {
+  50% {
+    padding-left: 8px;
+    padding-right: 0px;
+  }
+  100% {
+    padding-right: 4px;
+  }
+}
+@-webkit-keyframes slice-11 {
+  60% {
+    width: 100%;
+    left: 4px;
+  }
+  100% {
+    width: 100%;
+    left: -2px;
+    padding-left: 0;
+  }
+}
+@keyframes slice-11 {
+  60% {
+    width: 100%;
+    left: 4px;
+  }
+  100% {
+    width: 100%;
+    left: -2px;
+    padding-left: 0;
+  }
+}
+@-webkit-keyframes check-01-11 {
+  0% {
+    width: 4px;
+    top: auto;
+    transform: rotate(0);
+  }
+  50% {
+    width: 0px;
+    top: auto;
+    transform: rotate(0);
+  }
+  51% {
+    width: 0px;
+    top: 8px;
+    transform: rotate(45deg);
+  }
+  100% {
+    width: 5px;
+    top: 8px;
+    transform: rotate(45deg);
+  }
+}
+@keyframes check-01-11 {
+  0% {
+    width: 4px;
+    top: auto;
+    transform: rotate(0);
+  }
+  50% {
+    width: 0px;
+    top: auto;
+    transform: rotate(0);
+  }
+  51% {
+    width: 0px;
+    top: 8px;
+    transform: rotate(45deg);
+  }
+  100% {
+    width: 5px;
+    top: 8px;
+    transform: rotate(45deg);
+  }
+}
+@-webkit-keyframes check-02-11 {
+  0% {
+    width: 4px;
+    top: auto;
+    transform: rotate(0);
+  }
+  50% {
+    width: 0px;
+    top: auto;
+    transform: rotate(0);
+  }
+  51% {
+    width: 0px;
+    top: 8px;
+    transform: rotate(-45deg);
+  }
+  100% {
+    width: 10px;
+    top: 8px;
+    transform: rotate(-45deg);
+  }
+}
+@keyframes check-02-11 {
+  0% {
+    width: 4px;
+    top: auto;
+    transform: rotate(0);
+  }
+  50% {
+    width: 0px;
+    top: auto;
+    transform: rotate(0);
+  }
+  51% {
+    width: 0px;
+    top: 8px;
+    transform: rotate(-45deg);
+  }
+  100% {
+    width: 10px;
+    top: 8px;
+    transform: rotate(-45deg);
+  }
+}
+@-webkit-keyframes firework-11 {
+  0% {
+    opacity: 1;
+    box-shadow: 0 0 0 -2px #4f29f0, 0 0 0 -2px #4f29f0, 0 0 0 -2px #4f29f0,
+      0 0 0 -2px #4f29f0, 0 0 0 -2px #4f29f0, 0 0 0 -2px #4f29f0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    box-shadow: 0 -15px 0 0px #4f29f0, 14px -8px 0 0px #4f29f0,
+      14px 8px 0 0px #4f29f0, 0 15px 0 0px #4f29f0, -14px 8px 0 0px #4f29f0,
+      -14px -8px 0 0px #4f29f0;
+  }
+}
+@keyframes firework-11 {
+  0% {
+    opacity: 1;
+    box-shadow: 0 0 0 -2px #4f29f0, 0 0 0 -2px #4f29f0, 0 0 0 -2px #4f29f0,
+      0 0 0 -2px #4f29f0, 0 0 0 -2px #4f29f0, 0 0 0 -2px #4f29f0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    box-shadow: 0 -15px 0 0px #4f29f0, 14px -8px 0 0px #4f29f0,
+      14px 8px 0 0px #4f29f0, 0 15px 0 0px #4f29f0, -14px 8px 0 0px #4f29f0,
+      -14px -8px 0 0px #4f29f0;
+  }
+}
+
+/* !</task-body> */
+
+/* |<buttons> */
+
+.editBtn {
+  width: 36px;
+  height: 36px;
+  border: none;
+  background-color: #a370f0;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.editBtn i {
+  height: 17px;
+  color: white;
+  z-index: 3;
+  transition: all 0.3s ease;
+  transform-origin: bottom;
+}
+.editBtn:hover i {
+  transform: rotate(-15deg) translateX(5px);
+}
+
+.editBtn::after {
+  content: "";
+  width: 15px;
+  height: 1.5px;
+  position: absolute;
+  bottom: 9px;
+  left: -5px;
+  background-color: white;
+  border-radius: 2px;
+  z-index: 2;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.editBtn:hover::after {
+  transform: scaleX(1);
+  left: 0px;
+  transform-origin: right;
+}
+
+.editBtn:active {
+  transform: scale(0.92);
+  background-color: #885bcc;
+}
+
+.bin-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: tomato;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.bin-bottom {
+  width: 12px;
+  z-index: 2;
+}
+
+.bin-top {
+  width: 14px;
+  transform-origin: right;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.bin-button:hover .bin-top {
+  transform: rotate(45deg);
+}
+
+.bin-button:active {
+  transform: scale(0.92);
+  background-color: rgb(228, 87, 62);
+}
+
+.garbage {
+  position: absolute;
+  width: 8px;
+  height: auto;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.bin-button:hover .garbage {
+  animation: throw 0.4s linear;
+}
+@keyframes throw {
+  from {
+    transform: translate(-400%, -700%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+}
+
+#task-list #card {
+  position: relative;
+  overflow: hidden;
+  background-color: #f8f9fa;
+  transition: all 0.3s ease-in-out;
+}
+
+#task-list #card:hover {
+  background-color: #ffffff;
+  box-shadow: 0em 0em 0.5em #e5e6e7;
+  scale: 1.02;
+}
+
+#task-list #card #btns {
+  position: absolute;
+  right: -55px;
+  top: 45%;
+  transform: translateY(-50%);
+  opacity: 0;
+  scale: 0.6;
+  transition: all 0.3s ease-in-out;
+}
+
+#task-list #card:hover #btns {
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1;
+  scale: 1;
+}
+
+/* |</buttons> */
+
+/* ?</task-list> */
